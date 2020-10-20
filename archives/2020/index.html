@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -21,15 +21,17 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+  <meta name="description" content="雄关漫道真如铁，而今迈步从头越">
+<meta property="og:type" content="website">
+<meta property="og:title" content="张大铁的博客">
 <meta property="og:url" content="http://example.com/archives/2020/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="og:site_name" content="张大铁的博客">
+<meta property="og:description" content="雄关漫道真如铁，而今迈步从头越">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="张大铁">
 <meta name="twitter:card" content="summary">
 
 
@@ -42,11 +44,11 @@
     sidebar: "",
     isHome : false,
     isPost : false,
-    lang   : 'en'
+    lang   : 'zh-CN'
   };
 </script>
 
-  <title>Archive | Hexo</title>
+  <title>归档 | 张大铁的博客</title>
   
 
 
@@ -98,7 +100,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
+    <div class="toggle" aria-label="切换导航栏">
     </div>
   </div>
 
@@ -106,9 +108,10 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Hexo</h1>
+      <h1 class="site-title">张大铁的博客</h1>
       <i class="logo-line"></i>
     </a>
+      <p class="site-subtitle" itemprop="description">吾所成之事，不可逆也</p>
   </div>
 
   <div class="site-nav-right">
@@ -137,10 +140,10 @@
     <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
-          Table of Contents
+          文章目录
         </li>
         <li class="sidebar-nav-overview">
-          Overview
+          站点概览
         </li>
       </ul>
 
@@ -151,16 +154,20 @@
 
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
-  <div class="site-description" itemprop="description"></div>
+  <p class="site-author-name" itemprop="name">张大铁</p>
+  <div class="site-description" itemprop="description">雄关漫道真如铁，而今迈步从头越</div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
           <span class="site-state-item-count">1</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
       </div>
   </nav>
 </div>
@@ -197,7 +204,7 @@
   <div class="post-block">
     <div class="post-content">
       <div class="collection-title">
-        <span class="collection-header">Um..! 1 post. Keep on posting.</span>
+        <span class="collection-header">嗯..! 目前共计 1 篇日志。 继续努力。</span>
       </div>
 
       
@@ -209,15 +216,15 @@
     <header class="post-header">
       <div class="post-meta-container">
         <time itemprop="dateCreated"
-              datetime="2020-10-20T17:31:52+08:00"
+              datetime="2020-10-20T19:51:12+08:00"
               content="2020-10-20">
           10-20
         </time>
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2020/10/20/hello-world/" itemprop="url">
-            <span itemprop="name">Hello World</span>
+          <a class="post-title-link" href="/2020/10/20/R%E8%AF%AD%E8%A8%80%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" itemprop="url">
+            <span itemprop="name">R语言面向对象</span>
           </a>
       </div>
 
@@ -276,9 +283,41 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">张大铁</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">4k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">4 分钟</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
     </div>
@@ -308,6 +347,7 @@
 
 
   
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 

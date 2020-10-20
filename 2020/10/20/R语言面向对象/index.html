@@ -24,31 +24,34 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
 
-  <meta name="description" content="雄关漫道真如铁，而今迈步从头越">
-<meta property="og:type" content="website">
-<meta property="og:title" content="张大铁的博客">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="对象定义方式setClass()123456789101112131415161718192021222324252627RGBcolor &lt;- setClass(  # 类名  &quot;RGBcolor&quot;,  # 数据列表,用slots表示  slots &#x3D; c(r &#x3D; &quot;integer&quot;,            g &#x3D; &quot;integer&amp;quo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="R语言面向对象">
+<meta property="og:url" content="http://example.com/2020/10/20/R%E8%AF%AD%E8%A8%80%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/index.html">
 <meta property="og:site_name" content="张大铁的博客">
-<meta property="og:description" content="雄关漫道真如铁，而今迈步从头越">
+<meta property="og:description" content="对象定义方式setClass()123456789101112131415161718192021222324252627RGBcolor &lt;- setClass(  # 类名  &quot;RGBcolor&quot;,  # 数据列表,用slots表示  slots &#x3D; c(r &#x3D; &quot;integer&quot;,            g &#x3D; &quot;integer&amp;quo">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-10-20T11:51:12.000Z">
+<meta property="article:modified_time" content="2020-10-20T11:52:11.998Z">
 <meta property="article:author" content="张大铁">
+<meta property="article:tag" content="-R语言">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2020/10/20/R%E8%AF%AD%E8%A8%80%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
 
 
 <script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>张大铁的博客</title>
+  <title>R语言面向对象 | 张大铁的博客</title>
   
 
 
@@ -137,7 +140,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -149,6 +152,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E5%AE%9A%E4%B9%89%E6%96%B9%E5%BC%8FsetClass"><span class="nav-number">1.</span> <span class="nav-text">对象定义方式setClass()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E7%BB%91%E5%AE%9A%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E6%96%B9%E5%BC%8F%E8%BF%9B%E8%A1%8C%E5%88%9D%E5%80%BC%E7%9A%84%E5%A4%84%E7%90%86%EF%BC%8C%E7%BB%91%E5%AE%9A%E6%96%B9%E6%B3%95%E4%BD%BF%E7%94%A8setMethod-%E5%87%BD%E6%95%B0%E6%9D%A5%E8%BF%9B%E8%A1%8C%EF%BC%8C%E5%AE%9E%E9%99%85%E4%B8%8A%E7%BB%91%E5%AE%9A%E7%9A%84%E6%98%AF%E6%B3%9B%E5%9E%8B%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">通过绑定构造函数的方式进行初值的处理，绑定方法使用setMethod()函数来进行，实际上绑定的是泛型函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B0%E7%9A%84%E6%B3%9B%E5%9E%8B%E5%87%BD%E6%95%B0-%E7%B1%BB%E4%BC%BC%E4%BA%8E%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">创建新的泛型函数(类似于抽象方法)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%90%86%E8%A7%A3%E6%B3%9B%E5%9E%8B%E5%87%BD%E6%95%B0%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">理解泛型函数底层原理</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -193,11 +197,12 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
       
 
       
-    
+
+  
 
 
 <div class="post-block">
@@ -217,10 +222,9 @@
       <meta itemprop="name" content="张大铁的博客">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/20/R%E8%AF%AD%E8%A8%80%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="post-title-link" itemprop="url">R语言面向对象</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          R语言面向对象
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -235,6 +239,13 @@
     </span>
 
   
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
       </div>
       <div class="post-meta">
     <span class="post-meta-item" title="本文字数">
@@ -260,7 +271,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h4 id="对象定义方式setClass"><a href="#对象定义方式setClass" class="headerlink" title="对象定义方式setClass()"></a>对象定义方式setClass()</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">RGBcolor &lt;- setClass(</span><br><span class="line">  <span class="comment"># 类名</span></span><br><span class="line">  <span class="string">&quot;RGBcolor&quot;</span>,</span><br><span class="line">  <span class="comment"># 数据列表,用slots表示</span></span><br><span class="line">  slots = <span class="built_in">c</span>(r = <span class="string">&quot;integer&quot;</span>,</span><br><span class="line">            g = <span class="string">&quot;integer&quot;</span>,</span><br><span class="line">            b = <span class="string">&quot;integer&quot;</span>,</span><br><span class="line">            label = <span class="string">&quot;character&quot;</span>),</span><br><span class="line">  <span class="comment">#其他辅助元素，prototype参数用来设定初始值</span></span><br><span class="line">  prototype = <span class="built_in">list</span>(r = <span class="number">0L</span>,</span><br><span class="line">                   g = <span class="number">0L</span>,</span><br><span class="line">                   b = <span class="number">0L</span>,</span><br><span class="line">                   label = <span class="string">&quot;#00000&quot;</span></span><br><span class="line">  ),</span><br><span class="line">  <span class="comment"># 合法性检查</span></span><br><span class="line">  validity = <span class="keyword">function</span>(object)&#123;</span><br><span class="line">    <span class="keyword">if</span>(object@r&lt;<span class="number">0</span> | object@g&lt;<span class="number">0</span> | object@b&lt;<span class="number">0</span>)&#123;</span><br><span class="line">      <span class="built_in">return</span>(<span class="string">&quot;rediculous!&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(object@r&gt;<span class="number">255</span> | object@g&gt;<span class="number">255</span> | object@b&gt;<span class="number">255</span>)&#123;</span><br><span class="line">      <span class="built_in">return</span>(<span class="string">&quot;rediculous!&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span>(<span class="built_in">T</span>)</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br><span class="line"><span class="comment"># 实例化一个对象</span></span><br><span class="line">c1 &lt;- RGBcolor(r=<span class="number">20L</span>,g=<span class="number">20L</span>,b=<span class="number">20L</span>,label = <span class="string">&quot;#8c567f&quot;</span>)</span><br></pre></td></tr></table></figure>
+        <h4 id="对象定义方式setClass"><a href="#对象定义方式setClass" class="headerlink" title="对象定义方式setClass()"></a>对象定义方式setClass()</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">RGBcolor &lt;- setClass(</span><br><span class="line">  <span class="comment"># 类名</span></span><br><span class="line">  <span class="string">&quot;RGBcolor&quot;</span>,</span><br><span class="line">  <span class="comment"># 数据列表,用slots表示</span></span><br><span class="line">  slots = <span class="built_in">c</span>(r = <span class="string">&quot;integer&quot;</span>,</span><br><span class="line">            g = <span class="string">&quot;integer&quot;</span>,</span><br><span class="line">            b = <span class="string">&quot;integer&quot;</span>,</span><br><span class="line">            label = <span class="string">&quot;character&quot;</span>),</span><br><span class="line">  <span class="comment">#其他辅助元素，prototype参数用来设定初始值</span></span><br><span class="line">  prototype = <span class="built_in">list</span>(r = <span class="number">0L</span>,</span><br><span class="line">                   g = <span class="number">0L</span>,</span><br><span class="line">                   b = <span class="number">0L</span>,</span><br><span class="line">                   label = <span class="string">&quot;#00000&quot;</span></span><br><span class="line">  ),</span><br><span class="line">  <span class="comment"># 合法性检查</span></span><br><span class="line">  validity = <span class="keyword">function</span>(object)&#123;</span><br><span class="line">    <span class="keyword">if</span>(object@r&lt;<span class="number">0</span> | object@g&lt;<span class="number">0</span> | object@b&lt;<span class="number">0</span>)&#123;</span><br><span class="line">      <span class="built_in">return</span>(<span class="string">&quot;rediculous!&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(object@r&gt;<span class="number">255</span> | object@g&gt;<span class="number">255</span> | object@b&gt;<span class="number">255</span>)&#123;</span><br><span class="line">      <span class="built_in">return</span>(<span class="string">&quot;rediculous!&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span>(<span class="built_in">T</span>)</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br><span class="line"><span class="comment"># 实例化一个对象</span></span><br><span class="line">c1 &lt;- RGBcolor(r=<span class="number">20L</span>,g=<span class="number">20L</span>,b=<span class="number">20L</span>,label = <span class="string">&quot;#8c567f&quot;</span>)</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">showClass(<span class="string">&quot;RGBcolor&quot;</span>)</span><br><span class="line">showMethods(<span class="string">&quot;RGBcolor&quot;</span>)</span><br><span class="line"></span><br><span class="line">Class <span class="string">&quot;RGBcolor&quot;</span> [<span class="keyword">in</span> <span class="string">&quot;.GlobalEnv&quot;</span>]</span><br><span class="line">Slots:                                           </span><br><span class="line">Name:          r         g         b     label</span><br><span class="line">Class:   integer   integer   integer character</span><br><span class="line"></span><br><span class="line">Function <span class="string">&quot;RGBcolor&quot;</span>:</span><br><span class="line"> &lt;not an S4 generic <span class="keyword">function</span>&gt;</span><br></pre></td></tr></table></figure>
 
@@ -270,7 +281,6 @@
 
 <h4 id="理解泛型函数底层原理"><a href="#理解泛型函数底层原理" class="headerlink" title="理解泛型函数底层原理"></a>理解泛型函数底层原理</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">hx &lt;- as.hexmode(<span class="built_in">c</span>(<span class="number">100</span>，<span class="number">100</span>，<span class="number">100</span>))</span><br><span class="line">paste(<span class="built_in">c</span>(<span class="string">&quot;#&quot;</span>,hx),collapse = <span class="string">&quot;&quot;</span>)</span><br><span class="line">print(<span class="built_in">c</span>(<span class="string">&quot;#&quot;</span>,hx))</span><br><span class="line">print(hx)</span><br><span class="line">[<span class="number">1</span>] <span class="string">&quot;#100100100&quot;</span></span><br><span class="line">[<span class="number">1</span>] <span class="string">&quot;64&quot;</span> <span class="string">&quot;64&quot;</span> <span class="string">&quot;64&quot;</span></span><br><span class="line">[<span class="number">1</span>] <span class="string">&quot;#&quot;</span>   <span class="string">&quot;100&quot;</span> <span class="string">&quot;100&quot;</span> <span class="string">&quot;100&quot;</span></span><br><span class="line"><span class="comment">#==================================</span></span><br><span class="line">view(print)</span><br><span class="line"><span class="keyword">function</span> (x, ...) </span><br><span class="line"><span class="built_in">UseMethod</span>(<span class="string">&quot;print&quot;</span>)</span><br><span class="line"><span class="comment"># R使用泛型函数来处理标记为不同class的数据</span></span><br><span class="line"><span class="comment"># 实际上我们对于某种class的数据，是调用的函数名.class名的对应函数</span></span><br><span class="line"><span class="comment">#==================================</span></span><br><span class="line"><span class="built_in">class</span>(hx)</span><br><span class="line">[<span class="number">1</span>] <span class="string">&quot;hexmode&quot;</span></span><br><span class="line"><span class="comment">#print(hx)实际上是print.hexmode(hx)</span></span><br><span class="line"><span class="comment">#==================================</span></span><br><span class="line">view(print.hexmode)</span><br><span class="line"><span class="keyword">function</span> (x, ...) </span><br><span class="line">&#123;</span><br><span class="line">  print(format(x), ...)</span><br><span class="line">  <span class="built_in">invisible</span>(x)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#==================================</span></span><br><span class="line">view(foramt)</span><br><span class="line"><span class="keyword">function</span> (x, ...) </span><br><span class="line"><span class="built_in">UseMethod</span>(<span class="string">&quot;format&quot;</span>)</span><br><span class="line"><span class="comment">#==================================</span></span><br><span class="line">view(format.hexmode)</span><br><span class="line"><span class="keyword">function</span> (x, width = <span class="literal">NULL</span>, upper.case = <span class="literal">FALSE</span>, ...) </span><br><span class="line">&#123;</span><br><span class="line">  isna &lt;- <span class="built_in">is.na</span>(x)</span><br><span class="line">  y &lt;- <span class="built_in">as.integer</span>(x[!isna])</span><br><span class="line">  fmt0 &lt;- <span class="keyword">if</span> (upper.case) </span><br><span class="line">    <span class="string">&quot;X&quot;</span></span><br><span class="line">  <span class="keyword">else</span> <span class="string">&quot;x&quot;</span></span><br><span class="line">  fmt &lt;- <span class="keyword">if</span> (!is.null(width)) </span><br><span class="line">    paste0(<span class="string">&quot;%0&quot;</span>, width, fmt0)</span><br><span class="line">  <span class="keyword">else</span> paste0(<span class="string">&quot;%&quot;</span>, fmt0)</span><br><span class="line">  ans &lt;- rep.int(<span class="literal">NA_character_</span>, <span class="built_in">length</span>(x))</span><br><span class="line">  ans0 &lt;- sprintf(fmt, y)</span><br><span class="line">  <span class="keyword">if</span> (is.null(width) &amp;&amp; <span class="built_in">length</span>(y) &gt; <span class="number">1L</span>) &#123;</span><br><span class="line">    nc &lt;- <span class="built_in">max</span>(nchar(ans0))</span><br><span class="line">    ans0 &lt;- sprintf(paste0(<span class="string">&quot;%0&quot;</span>, nc, fmt0), y)</span><br><span class="line">  &#125;</span><br><span class="line">  ans[!isna] &lt;- ans0</span><br><span class="line">  <span class="built_in">dim</span>(ans) &lt;- <span class="built_in">dim</span>(x)</span><br><span class="line">  dimnames(ans) &lt;- dimnames(x)</span><br><span class="line">  <span class="built_in">names</span>(ans) &lt;- <span class="built_in">names</span>(x)</span><br><span class="line">  ans</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#===============================</span></span><br></pre></td></tr></table></figure>
 
-      
     </div>
 
     
@@ -278,17 +288,18 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-tags">
+              <a href="/tags/R%E8%AF%AD%E8%A8%80/" rel="tag"># -R语言</a>
+          </div>
+
+        
+
     </footer>
   </article>
 </div>
 
 
 
-
-
-  
 
 
 
