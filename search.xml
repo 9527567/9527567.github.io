@@ -55,22 +55,6 @@
       </tags>
   </entry>
   <entry>
-    <title>on my zsh以及vimplus配置符号字体的问题</title>
-    <url>/2020/11/01/on-my-zsh%E4%BB%A5%E5%8F%8Avimplus%E9%85%8D%E7%BD%AE%E7%AC%A6%E5%8F%B7%E5%AD%97%E4%BD%93%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>今天在安装zsh和vimplus的过程中符号一直未能正常显示，经历波折后最终找到原因，特此记录。</p>
-<h5 id="安装zsh和vimplus的主要流程"><a href="#安装zsh和vimplus的主要流程" class="headerlink" title="安装zsh和vimplus的主要流程"></a>安装zsh和vimplus的主要流程</h5><ol>
-<li>安装on my zsh和vimplus</li>
-<li>Linux和Windows分别安装powerline字体</li>
-<li>设置Windows终端字体为Droid Sans Mono Nerd Font</li>
-</ol>
-<p>问题出在最后的符号显示上，网上的解决方案都是安装powerline字体，但是此方法并不起作用。</p>
-<p><strong>应该在<a href="https://github.com/ryanoasis/nerd-fonts">https://github.com/ryanoasis/nerd-fonts</a> 下载Windows专用字体Droid Sans Mono Nerd Font Complete Mono Windows Compatible.otf而非Droid Sans Mono Nerd Font Complete.otf，而后者是绝大部分网络上所提供的版本。</strong></p>
-]]></content>
-      <tags>
-        <tag>-tecnology -fonts</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>贪心算法刷题记录</title>
     <url>/2020/11/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<h4 id="贪心算法：总是做出在当前看来是最好的选择，也就是说，不从整体上考虑，得到局部最优解，局部最优即是全局最优。"><a href="#贪心算法：总是做出在当前看来是最好的选择，也就是说，不从整体上考虑，得到局部最优解，局部最优即是全局最优。" class="headerlink" title="贪心算法：总是做出在当前看来是最好的选择，也就是说，不从整体上考虑，得到局部最优解，局部最优即是全局最优。"></a>贪心算法：总是做出在当前看来是最好的选择，也就是说，不从整体上考虑，得到局部最优解，局部最优即是全局最优。</h4><h5 id="力扣-455-分发饼干"><a href="#力扣-455-分发饼干" class="headerlink" title="力扣 455.分发饼干"></a><a href="https://leetcode-cn.com/problems/assign-cookies/">力扣 455.分发饼干</a></h5><p>这题的思路很简单，对两数组排序，从前匹配即可。</p>
@@ -88,6 +72,22 @@
 ]]></content>
       <tags>
         <tag>-Leetcode -刷题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>on my zsh以及vimplus配置符号字体的问题</title>
+    <url>/2020/11/01/on-my-zsh%E4%BB%A5%E5%8F%8Avimplus%E9%85%8D%E7%BD%AE%E7%AC%A6%E5%8F%B7%E5%AD%97%E4%BD%93%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>今天在安装zsh和vimplus的过程中符号一直未能正常显示，经历波折后最终找到原因，特此记录。</p>
+<h5 id="安装zsh和vimplus的主要流程"><a href="#安装zsh和vimplus的主要流程" class="headerlink" title="安装zsh和vimplus的主要流程"></a>安装zsh和vimplus的主要流程</h5><ol>
+<li>安装on my zsh和vimplus</li>
+<li>Linux和Windows分别安装powerline字体</li>
+<li>设置Windows终端字体为Droid Sans Mono Nerd Font</li>
+</ol>
+<p>问题出在最后的符号显示上，网上的解决方案都是安装powerline字体，但是此方法并不起作用。</p>
+<p><strong>应该在<a href="https://github.com/ryanoasis/nerd-fonts">https://github.com/ryanoasis/nerd-fonts</a> 下载Windows专用字体Droid Sans Mono Nerd Font Complete Mono Windows Compatible.otf而非Droid Sans Mono Nerd Font Complete.otf，而后者是绝大部分网络上所提供的版本。</strong></p>
+]]></content>
+      <tags>
+        <tag>-tecnology -fonts</tag>
       </tags>
   </entry>
 </search>
