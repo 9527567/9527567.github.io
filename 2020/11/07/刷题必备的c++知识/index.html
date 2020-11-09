@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="背景主流的版本控制器  git svn …  版本控制分类  本地版本控制 集中版本控制（svn） 分布式版本控制（git）  git核心原理git本地有三个工作区域：  工作目录：本地存放代码的位置 暂存区：本质上是一个文件，临时存放改动 资源库：仓库区 远程仓库：GitHub，gitee等  git核心命令 add commit push pull checkout status fetch">
+  <meta name="description" content="1.指针与引用引用为对象起了另外一个名字，引用类型引用另外一种类型。引用不是对象，只是为一个已经存在的对象所起的另外一个名字。大概和Linux里的alias别名有点像。 操作符&amp;和*，在声明语句中，&amp;和*用于组成复合类型（引用和指针），在表达式中它们又转变为运算符（取地址和解引用），含义截然不同，可认为是不同的符号。 在声明语句中，&amp;和*扮演的总是变量的修饰符而与数据类型的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git学习笔记">
-<meta property="og:url" content="http://example.com/2020/10/23/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="刷题必备的c++知识">
+<meta property="og:url" content="http://example.com/2020/11/07/%E5%88%B7%E9%A2%98%E5%BF%85%E5%A4%87%E7%9A%84c++%E7%9F%A5%E8%AF%86/index.html">
 <meta property="og:site_name" content="张大铁的博客">
-<meta property="og:description" content="背景主流的版本控制器  git svn …  版本控制分类  本地版本控制 集中版本控制（svn） 分布式版本控制（git）  git核心原理git本地有三个工作区域：  工作目录：本地存放代码的位置 暂存区：本质上是一个文件，临时存放改动 资源库：仓库区 远程仓库：GitHub，gitee等  git核心命令 add commit push pull checkout status fetch">
+<meta property="og:description" content="1.指针与引用引用为对象起了另外一个名字，引用类型引用另外一种类型。引用不是对象，只是为一个已经存在的对象所起的另外一个名字。大概和Linux里的alias别名有点像。 操作符&amp;和*，在声明语句中，&amp;和*用于组成复合类型（引用和指针），在表达式中它们又转变为运算符（取地址和解引用），含义截然不同，可认为是不同的符号。 在声明语句中，&amp;和*扮演的总是变量的修饰符而与数据类型的">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-10-23T05:41:50.000Z">
-<meta property="article:modified_time" content="2020-10-23T06:32:53.478Z">
+<meta property="article:published_time" content="2020-11-07T08:34:01.000Z">
+<meta property="article:modified_time" content="2020-11-08T12:06:58.538Z">
 <meta property="article:author" content="张大铁">
-<meta property="article:tag" content="-技术工具">
+<meta property="article:tag" content="-刷题 -c++">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2020/10/23/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+<link rel="canonical" href="http://example.com/2020/11/07/%E5%88%B7%E9%A2%98%E5%BF%85%E5%A4%87%E7%9A%84c++%E7%9F%A5%E8%AF%86/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>git学习笔记 | 张大铁的博客</title>
+  <title>刷题必备的c++知识 | 张大铁的博客</title>
   
 
 
@@ -197,7 +197,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/23/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/07/%E5%88%B7%E9%A2%98%E5%BF%85%E5%A4%87%E7%9A%84c++%E7%9F%A5%E8%AF%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/9527.jpg">
@@ -210,7 +210,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          git学习笔记
+          刷题必备的c++知识
         </h1>
 
         <div class="post-meta">
@@ -219,10 +219,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-10-23 13:41:50 / 修改时间：14:32:53" itemprop="dateCreated datePublished" datetime="2020-10-23T13:41:50+08:00">2020-10-23</time>
+              <time title="创建时间：2020-11-07 16:34:01" itemprop="dateCreated datePublished" datetime="2020-11-07T16:34:01+08:00">2020-11-07</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-08 20:06:58" itemprop="dateModified" datetime="2020-11-08T20:06:58+08:00">2020-11-08</time>
+              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -237,7 +243,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>179</span>
+              <span>408</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -256,36 +262,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h5 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h5><p>主流的版本控制器</p>
-<ul>
-<li>git</li>
-<li>svn</li>
-<li>…</li>
-</ul>
-<p>版本控制分类</p>
-<ul>
-<li>本地版本控制</li>
-<li>集中版本控制（svn）</li>
-<li>分布式版本控制（git）</li>
-</ul>
-<h5 id="git核心原理"><a href="#git核心原理" class="headerlink" title="git核心原理"></a>git核心原理</h5><p>git本地有三个工作区域：</p>
-<ul>
-<li>工作目录：本地存放代码的位置</li>
-<li>暂存区：本质上是一个文件，临时存放改动</li>
-<li>资源库：仓库区</li>
-<li>远程仓库：GitHub，gitee等</li>
-</ul>
-<h5 id="git核心命令"><a href="#git核心命令" class="headerlink" title="git核心命令"></a>git核心命令</h5><ul>
-<li>add</li>
-<li>commit</li>
-<li>push</li>
-<li>pull</li>
-<li>checkout</li>
-<li>status</li>
-<li>fetch</li>
-<li>remote</li>
-</ul>
+        <h4 id="1-指针与引用"><a href="#1-指针与引用" class="headerlink" title="1.指针与引用"></a>1.指针与引用</h4><p>引用为对象起了另外一个名字，引用类型引用另外一种类型。引用不是对象，只是为一个已经存在的对象所起的另外一个名字。大概和Linux里的alias别名有点像。</p>
+<p>操作符&amp;和*，在声明语句中，&amp;和*用于组成复合类型（引用和指针），在表达式中它们又转变为运算符（取地址和解引用），含义截然不同，可认为是不同的符号。</p>
+<p>在声明语句中，&amp;和*扮演的总是变量的修饰符而与数据类型的修饰符，例如：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//p1是指针，p2是int</span></span><br><span class="line"><span class="keyword">int</span>* p1, p2;</span><br></pre></td></tr></table></figure>
 
+<p>因此更推荐修饰符贴近变量<code>int *p1;</code>的写法。</p>
+<p>引用的一大用法即改变被引用对象的值，在Java中体现的更明显。</p>
+<h4 id="2-顺序容器vector"><a href="#2-顺序容器vector" class="headerlink" title="2.顺序容器vector"></a>2.顺序容器vector</h4><p>一维的vector总是简单易用，只需要查相关的api即可。但是二维的vector让人有些摸不着头脑。比如：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span> &lt;<span class="keyword">int</span>&gt; &gt; vt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-sort-等一众algorithm库函数"><a href="#3-sort-等一众algorithm库函数" class="headerlink" title="3.sort()等一众algorithm库函数"></a>3.sort()等一众algorithm库函数</h4>
     </div>
 
     
@@ -300,7 +287,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://example.com/2020/10/23/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="git学习笔记">http://example.com/2020/10/23/git学习笔记/</a>
+    <a href="http://example.com/2020/11/07/%E5%88%B7%E9%A2%98%E5%BF%85%E5%A4%87%E7%9A%84c++%E7%9F%A5%E8%AF%86/" title="刷题必备的c++知识">http://example.com/2020/11/07/刷题必备的c++知识/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -311,7 +298,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7/" rel="tag"># -技术工具</a>
+              <a href="/tags/%E5%88%B7%E9%A2%98-c/" rel="tag"># -刷题 -c++</a>
           </div>
 
         
@@ -320,13 +307,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/10/20/R%E8%AF%AD%E8%A8%80%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="prev" title="R语言面向对象">
-      <i class="fa fa-chevron-left"></i> R语言面向对象
+    <a href="/2020/11/03/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" rel="prev" title="贪心算法刷题记录">
+      <i class="fa fa-chevron-left"></i> 贪心算法刷题记录
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/11/01/on-my-zsh%E4%BB%A5%E5%8F%8Avimplus%E9%85%8D%E7%BD%AE%E7%AC%A6%E5%8F%B7%E5%AD%97%E4%BD%93%E7%9A%84%E9%97%AE%E9%A2%98/" rel="next" title="on my zsh以及vimplus配置符号字体的问题">
-      on my zsh以及vimplus配置符号字体的问题 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -385,7 +369,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-text">背景</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#git%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86"><span class="nav-text">git核心原理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#git%E6%A0%B8%E5%BF%83%E5%91%BD%E4%BB%A4"><span class="nav-text">git核心命令</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8"><span class="nav-text">1.指针与引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E9%A1%BA%E5%BA%8F%E5%AE%B9%E5%99%A8vector"><span class="nav-text">2.顺序容器vector</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-sort-%E7%AD%89%E4%B8%80%E4%BC%97algorithm%E5%BA%93%E5%87%BD%E6%95%B0"><span class="nav-text">3.sort()等一众algorithm库函数</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
