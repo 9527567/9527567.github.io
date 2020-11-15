@@ -29,7 +29,13 @@ int* p1, p2;
 
 ~~~c++
 vector<vector <int> > vt;
+//用迭代器访问二维vecotr
+
 ~~~
 
 #### 3.sort()等一众algorithm库函数
+
+##### sort()用法
+
+
 
